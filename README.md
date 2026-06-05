@@ -45,11 +45,24 @@ src/
 - Reveal on-scroll: estado base **siempre visible** (solo `transform`), degrada sin JS
   y respeta `prefers-reduced-motion`.
 
+## Imágenes y créditos
+
+Las imágenes del handoff son las **definitivas** (las mismas del deck oficial de
+la propuesta, confirmado 2026-06-05). Créditos de las usadas en la landing:
+
+| Asset | Crédito |
+|---|---|
+| `sancristobal.jpg` (hero) | San Cristóbal © Monicacorrea · CC BY-SA 3.0 (Wikimedia) |
+| `puerto-seco.jpg` | Terminal intermodal © David Wilson · CC BY 2.0 (Wikimedia) |
+| `tren.jpg` | Tren © Petar Milošević · CC BY-SA 4.0 (Wikimedia) |
+| `mapa-tachira.png` | Material técnico de la propuesta |
+| `autopista.jpg`, `render-hub.png` | Material de la propuesta / stock del deck |
+
+El footer enlaza la atribución genérica ("Imágenes vía Wikimedia Commons (CC)"),
+igual que la referencia.
+
 ## Pendiente antes de publicar
 
-- [ ] Reemplazar imágenes placeholder (stock / Wikimedia CC) por renders/fotos
-      oficiales y actualizar créditos (`design-handoff/handoff/README.md`).
-- [ ] Confirmar derechos de `mapa-tachira.png`.
 - [ ] Enlazar el deck real en el CTA ("Ver la propuesta completa" — hoy placeholder).
 - [ ] Cifras de hub aéreo / puerto seco / ferroviario / ITS: **por dimensionar**,
       no inventar montos.
