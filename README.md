@@ -63,6 +63,7 @@ igual que la referencia.
 
 ## Pendiente antes de publicar
 
-- [ ] Enlazar el deck real en el CTA ("Ver la propuesta completa" — hoy placeholder).
-- [ ] Cifras de hub aéreo / puerto seco / ferroviario / ITS: **por dimensionar**,
-      no inventar montos.
+- [ ] CTA "Ver la propuesta completa": placeholder **a propósito** — el whitepaper
+      aún no existe. Enlazarlo cuando esté.
+- [ ] Cifras de hub aéreo / puerto seco / ferroviario / ITS: **por dimensionar**.
+      Las completa el Ing. Ballesteros; no inventar montos.
