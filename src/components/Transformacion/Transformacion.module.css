@@ -1,0 +1,8 @@
+.trans{ display:flex; flex-direction:column; }
+.tr{ display:grid; grid-template-columns:1fr 64px 1.2fr; align-items:center;
+  gap:20px; padding:24px 0; border-top:1px solid var(--line-d); }
+.tr:last-child{ border-bottom:1px solid var(--line-d); }
+.from{ font-size:clamp(18px,2.4vw,26px); color:rgba(242,240,234,.55); }
+.ar{ font-family:var(--font-cond); font-size:30px; color:var(--gold); text-align:center; }
+.to{ font-family:var(--font-cond); font-weight:600; font-size:clamp(20px,2.8vw,32px);
+  color:var(--paper); }

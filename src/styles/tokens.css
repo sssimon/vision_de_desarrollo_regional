@@ -1,0 +1,78 @@
+/* ============================================================
+   TÁCHIRA 2030 — Design tokens
+   Fuente de verdad de todos los valores del sistema de diseño.
+   Importar una sola vez en la raíz de la app (main.tsx).
+   Base: design-handoff/handoff/tokens.css + tokens derivados
+   promovidos desde la implementación de referencia.
+   ============================================================ */
+
+:root{
+  /* ---- Color · Ink (dark / navy) ---- */
+  --ink:      #0E1C2B;   /* primary dark surface, headlines on light, footer base */
+  --ink-2:    #16293c;   /* dark hover / secondary dark surface */
+  --ink-3:    #2A4258;   /* body text on light backgrounds */
+
+  /* ---- Color · Paper (light) ---- */
+  --paper:    #F2F0EA;   /* page background (warm off-white) */
+  --paper-2:  #E8E5DC;   /* subtle fills */
+  --paper-3:  #FBFAF6;   /* alternating section background, cards */
+  --white:    #FFFFFF;   /* image frames / pure cards */
+
+  /* ---- Color · Accent ---- */
+  --gold:     #BE8A2E;   /* PRIMARY accent — kickers, CTAs, highlights */
+  --gold-2:   #D9A94A;   /* lighter gold — accent on dark, hovers */
+  --signal:   #AE3B2C;   /* critical / "Paralizada" / déficit (use sparingly) */
+  --good:     #3C7C68;   /* positive / financial upside */
+  --steel:    #5B6B7B;   /* muted supporting text / captions */
+
+  /* ---- Color · Lines ---- */
+  --line:     rgba(14,28,43,.14);   /* hairlines on light */
+  --line-d:   rgba(242,240,234,.16);/* hairlines on dark */
+
+  /* ---- Color · Derived surfaces (promovidos desde la referencia) ----
+     Los rgba() de un solo uso en componentes derivan SIEMPRE de los RGB
+     de --ink (14,28,43) o --paper (242,240,234); no introducir tonos nuevos. */
+  --ink-deep: #0a151f;              /* base del footer (más oscuro que --ink) */
+  --nav-bg:   rgba(14,28,43,.92);   /* velo del nav sticky (= --ink @ 92%) */
+  --shadow-card: 0 18px 40px -24px rgba(14,28,43,.4); /* hover de tarjetas */
+
+  /* ---- Typography ---- */
+  --font-sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;        /* body + UI */
+  --font-cond:"IBM Plex Sans Condensed","IBM Plex Sans",sans-serif;     /* display / headings / big numbers */
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;                   /* kickers, labels, data, footer */
+
+  /* Fluid type scale (clamp: min, preferred, max) */
+  --t-hero:   clamp(44px, 6vw,   92px);  /* hero h1 — line-height 1.07 */
+  --t-h2:     clamp(34px, 4.4vw, 58px);  /* section titles — line-height 1.1 */
+  --t-cta:    clamp(36px, 4.6vw, 64px);  /* CTA headline — line-height 1.1 */
+  --t-stat:   clamp(38px, 4.6vw, 62px);  /* big numbers (cond) */
+  --t-lede:   20px;                      /* section intro paragraph */
+  --t-body:   16px;                      /* card / list copy */
+  --t-kicker: 14px;                      /* mono eyebrow (uppercase, .22em tracking) */
+
+  /* IMPORTANT: condensed headings need line-height >= 1.07 AND a small
+     padding-bottom (~.1em) so descenders never collide with the next block.
+     See DESIGN_NOTES.md → "Gotchas". */
+
+  /* ---- Layout ---- */
+  --wrap:     1240px;   /* max content width */
+  --gutter:   48px;     /* horizontal page padding (desktop) */
+  --section-y:104px;    /* vertical rhythm between major sections */
+  --radius:   6px;      /* cards / frames */
+  --radius-sm:3px;      /* buttons / chips */
+
+  /* ---- Motion ---- */
+  --ease:     cubic-bezier(.2,.7,.3,1);
+
+  /* ---- A11y ---- */
+  --focus-ring: var(--ink);  /* anillo :focus-visible; superficies oscuras lo
+                                redefinen a var(--gold-2) */
+}
+
+/* Breakpoints used in the reference (max-width):
+   980px  → 4-col grids become 2-col
+   860px  → split (text+image) sections stack; 3-col → 1-col
+   820px  → nav links hide → mobile menu
+   760px  → stat band / impact grid become 2-col
+   560px  → remaining 2-col grids become 1-col
+*/

@@ -1,0 +1,11 @@
+.pillars{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+.pillar{ background:var(--white); border:1px solid var(--line);
+  border-radius:var(--radius); overflow:hidden; }
+.ph{ height:200px; position:relative; }
+.ph img{ width:100%; height:100%; object-fit:cover; }
+.c{ padding:28px 28px 32px; }
+.pillar h3{ font-size:22px; font-weight:600; margin-bottom:10px; }
+.pillar p{ font-size:16px; color:var(--ink-3); }
+.meta{ font-family:var(--font-mono); font-size:13px; color:var(--gold);
+  margin-top:14px; letter-spacing:.04em; }
+@media(max-width:860px){ .pillars{ grid-template-columns:1fr; } }

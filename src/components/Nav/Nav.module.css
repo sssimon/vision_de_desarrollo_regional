@@ -1,0 +1,33 @@
+.nav{ position:sticky; top:0; z-index:50; background:var(--nav-bg);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line-d);
+  --focus-ring:var(--gold-2); }
+.bar{ max-width:var(--wrap); margin:0 auto; padding:0 var(--gutter);
+  display:flex; align-items:center; justify-content:space-between; height:74px; }
+.links{ display:flex; gap:34px; font-size:15px; color:rgba(242,240,234,.78); }
+.links a:hover{ color:var(--gold-2); }
+
+/* ---- Menú móvil (no existe en la referencia: solo ocultaba los links) ---- */
+.menuBtn{ display:none; align-items:center; justify-content:center;
+  width:44px; height:44px; margin-right:-11px;
+  background:none; border:0; color:var(--paper); cursor:pointer; }
+
+.panel{ display:none; }
+
+@media(max-width:820px){
+  .links{ display:none; }
+  .cta{ display:none; } /* el CTA dorado vive dentro del panel */
+  .menuBtn{ display:inline-flex; }
+  .panel{ display:block; position:absolute; top:74px; left:0; right:0;
+    background:rgba(14,28,43,.98); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line-d); padding:18px var(--gutter) 28px; }
+  .panel[hidden]{ display:none; }
+}
+
+/* Mismo peldaño tipográfico que .btn (14px mono uppercase, tracking .06em):
+   la voz "interactiva mono" del sistema, no un valor nuevo. */
+.panelLink{ display:block; padding:16px 0; font-family:var(--font-mono);
+  font-size:14px; letter-spacing:.06em; text-transform:uppercase;
+  color:rgba(242,240,234,.85); border-top:1px solid var(--line-d); }
+.panelLink:first-child{ border-top:0; }
+.panelLink:hover{ color:var(--gold-2); }
+.panelCta{ margin-top:18px; width:100%; justify-content:center; }

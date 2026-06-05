@@ -1,0 +1,10 @@
+.foot{ background:var(--ink-deep); color:rgba(242,240,234,.7);
+  padding:70px 0 40px; --focus-ring:var(--gold-2); }
+.foot a:hover{ color:var(--gold-2); }
+.grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; }
+.lab{ font-family:var(--font-mono); font-size:12px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+.bottom{ border-top:1px solid var(--line-d); margin-top:48px; padding-top:24px;
+  font-family:var(--font-mono); font-size:12px; color:rgba(242,240,234,.45);
+  display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+@media(max-width:760px){ .grid{ grid-template-columns:1fr 1fr; } }
