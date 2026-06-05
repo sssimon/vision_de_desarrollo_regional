@@ -1,0 +1,10 @@
+.band{ background:var(--ink); color:var(--paper); --focus-ring:var(--gold-2); }
+.wrap{ max-width:var(--wrap); margin:0 auto; display:grid;
+  grid-template-columns:repeat(4,1fr); gap:30px; padding:54px var(--gutter); }
+.n{ font-family:var(--font-cond); font-weight:600; font-size:var(--t-stat);
+  line-height:1; color:var(--gold-2); }
+.l{ font-family:var(--font-mono); font-size:13px; letter-spacing:.08em;
+  text-transform:uppercase; color:rgba(242,240,234,.7); margin-top:10px; }
+@media(max-width:760px){
+  .wrap{ grid-template-columns:1fr 1fr; gap:34px 24px; }
+}

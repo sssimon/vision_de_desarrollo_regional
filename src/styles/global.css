@@ -1,0 +1,70 @@
+/* ============================================================
+   TÁCHIRA 2030 — global.css
+   Reset, base tipográfica y utilidades compartidas entre
+   secciones (.wrap, .eyebrow, .btn, .chip, .block, .head,
+   .reveal, :focus-visible). Los valores son el port exacto de
+   design-handoff/handoff/reference/landing.css con los tokens
+   --font-* unificados.
+   ============================================================ */
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+}
+body{ font-family:var(--font-sans); background:var(--paper); color:var(--ink);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; line-height:1.5; }
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+
+.wrap{ max-width:var(--wrap); margin:0 auto; padding:0 var(--gutter); }
+.eyebrow{ font-family:var(--font-mono); font-size:var(--t-kicker); letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:600; }
+.cond{ font-family:var(--font-cond); }
+.brand{ font-family:var(--font-mono); font-size:16px; letter-spacing:.18em; text-transform:uppercase; color:var(--paper); font-weight:600; }
+.brand b{ color:var(--gold); }
+
+/* ---------- Botones ---------- */
+.btn{ display:inline-flex; align-items:center; gap:10px; font-family:var(--font-mono);
+  font-size:14px; letter-spacing:.06em; font-weight:600; padding:13px 22px; border-radius:var(--radius-sm);
+  border:1px solid transparent; cursor:pointer; transition:.18s; text-transform:uppercase; }
+.btn-gold{ background:var(--gold); color:var(--ink); }
+.btn-gold:hover{ background:var(--gold-2); }
+.btn-ghost{ border-color:rgba(242,240,234,.4); color:var(--paper); }
+.btn-ghost:hover{ border-color:var(--gold); color:var(--gold-2); }
+.btn-dark{ background:var(--ink); color:var(--paper); }
+.btn-dark:hover{ background:var(--ink-2); }
+
+/* ---------- Chips de estado ---------- */
+.chip{ align-self:flex-start; display:inline-flex; align-items:center; gap:7px; font-family:var(--font-mono);
+  font-size:12px; letter-spacing:.06em; text-transform:uppercase; font-weight:600; padding:5px 11px; border-radius:2px; margin-top:14px; }
+.chip::before{ content:""; width:6px; height:6px; border-radius:50%; background:currentColor; }
+.chip.crit{ color:var(--signal); background:rgba(174,59,44,.1); }
+.chip.part{ color:var(--gold); background:rgba(190,138,46,.13); }
+.chip.go{ color:var(--good); background:rgba(60,124,104,.12); }
+.chip.plan{ color:var(--steel); background:rgba(91,107,123,.13); }
+
+/* ---------- Secciones ---------- */
+section.block{ padding:var(--section-y) 0; }
+section.block.alt{ background:var(--paper-3); }
+.head{ max-width:62ch; margin-bottom:54px; }
+.head h2{ font-family:var(--font-cond); font-weight:600; font-size:var(--t-h2);
+  line-height:1.1; letter-spacing:-.01em; margin-top:16px; padding-bottom:.1em; text-wrap:balance; }
+.head p{ font-size:var(--t-lede); color:var(--ink-3); margin-top:18px; text-wrap:pretty; }
+
+/* secciones oscuras */
+.dark{ background:var(--ink); color:var(--paper); --focus-ring:var(--gold-2); }
+.dark .head h2{ color:var(--paper); }
+.dark .head p{ color:rgba(242,240,234,.78); }
+
+/* ---------- Reveal: entrada sutil solo-transform que SIEMPRE deja el
+   contenido visible (nunca oculta por opacidad — seguro para captura
+   estática, impresión y sin-JS) ---------- */
+.reveal{ transition:transform .6s var(--ease); }
+.js .reveal:not(.in){ transform:translateY(18px); }
+@media(prefers-reduced-motion:reduce){ .reveal{ transform:none!important; transition:none; } }
+
+/* ---------- A11y ---------- */
+:focus-visible{ outline:2px solid var(--focus-ring); outline-offset:2px; }
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+[id]{ scroll-margin-top:74px; } /* anclas no quedan bajo el nav sticky (h=74px) */

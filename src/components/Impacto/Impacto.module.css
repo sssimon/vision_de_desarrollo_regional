@@ -1,0 +1,8 @@
+.impact{ display:grid; grid-template-columns:repeat(3,1fr); gap:48px 56px; }
+.imp{ border-left:3px solid var(--gold); padding-left:26px; }
+.n{ font-family:var(--font-cond); font-weight:600; font-size:clamp(38px,4.4vw,56px);
+  line-height:1.06; white-space:nowrap; }
+.l{ font-size:16px; color:var(--ink-3); margin-top:10px; }
+@media(max-width:760px){
+  .impact{ grid-template-columns:1fr 1fr; gap:36px 28px; }
+}

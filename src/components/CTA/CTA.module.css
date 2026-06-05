@@ -1,0 +1,6 @@
+.cta{ text-align:center; }
+.title{ font-family:var(--font-cond); font-weight:600; font-size:var(--t-cta);
+  line-height:1.1; max-width:22ch; margin:18px auto 0; padding-bottom:.1em;
+  color:var(--paper); text-wrap:balance; }
+.text{ font-size:20px; color:rgba(242,240,234,.8); max-width:60ch; margin:30px auto 0; }
+.actions{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:42px; }
