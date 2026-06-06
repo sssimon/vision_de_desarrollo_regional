@@ -84,6 +84,13 @@ export interface SectionHead {
   lede?: string
 }
 
+/** Figura con caption (correcciones de junio 2026). */
+export interface Figura {
+  img: string
+  alt: string
+  caption: string
+}
+
 /* ---------------- Nav ---------------- */
 
 export const navLinks: NavLink[] = [
@@ -190,7 +197,7 @@ export const ejes: Eje[] = [
   },
   {
     tag: 'EJE 2',
-    nombre: 'La Fría – Cúcuta',
+    nombre: 'La Fría – Guarumito – Agua Clara – Cúcuta',
     desc: 'Vía expresa doble calzada · 65 km',
     val: { n: '$280', affix: { text: ' M', size: 0.5, gold: true } },
     estado: 'part',
@@ -214,6 +221,14 @@ export const ejes: Eje[] = [
   },
 ]
 
+/** Mapa binacional de Guarumito — corrección #2 (junio 2026). */
+export const ejesFigura: Figura = {
+  img: '/assets/mapa-eje2.png',
+  alt: 'Mapa del cruce binacional en Guarumito, frontera Venezuela – Colombia',
+  caption:
+    'Eje 2 · cruce binacional La Fría – Guarumito – Agua Clara – Cúcuta · frontera Venezuela – Colombia',
+}
+
 /* ---------------- Proyecto estrella ---------------- */
 
 export const estrellaHead: SectionHead = {
@@ -231,8 +246,17 @@ export const estrella = {
     { label: 'Longitud', value: '65,9 km · 5 tramos' },
     { label: 'Costo medio', value: '$18,5 M / km' },
     { label: 'Tramo II · Copa de Oro – Lobatera', value: '$499,8 M' },
+    { label: 'Túnel Palo Grande', value: '2 × 2.500 m' },
     { label: 'Tramo IVb · Viaducto La Colorada', value: '$207,9 M' },
   ] satisfies StarRow[],
+}
+
+/** Infografía del trazado del corredor — corrección #4 (junio 2026). */
+export const estrellaFigura: Figura = {
+  img: '/assets/trazado-corredor.png',
+  alt: 'Trazado del corredor San Cristóbal – La Fría por tramos',
+  caption:
+    'Trazado del corredor · 5 tramos · túnel Palo Grande 2 × 2.500 m · viaductos hasta H = 64 m · Viaducto La Colorada 359 m',
 }
 
 /* ---------------- Pilares ---------------- */
@@ -337,6 +361,7 @@ export const fases: Fase[] = [
       'Completar Viaducto La Colorada',
       'Pista La Fría a 2.500 m',
       'Básculas en 4 pasos fronterizos',
+      'Rehabilitar tramos I, III y V',
     ],
   },
   {
