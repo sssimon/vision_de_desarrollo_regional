@@ -11,6 +11,10 @@ import type { ReactNode } from 'react'
 
 export type Estado = 'crit' | 'part' | 'go' | 'plan'
 
+/** Ruta pública consciente del `base` de Vite — GitHub Pages sirve bajo
+ *  /vision_de_desarrollo_regional/, así que las rutas absolutas a pelo se rompen. */
+const asset = (file: string) => `${import.meta.env.BASE_URL}assets/${file}`
+
 /** Sufijo de una cifra grande (unidad o periodicidad), con su
  *  tamaño relativo exacto de la referencia (.4 / .42 / .45 / .5 / .6 em)
  *  y si va en dorado (las unidades sí; los "/año" del impacto no). */
@@ -84,6 +88,13 @@ export interface SectionHead {
   lede?: string
 }
 
+/** Figura con caption (correcciones de junio 2026). */
+export interface Figura {
+  img: string
+  alt: string
+  caption: string
+}
+
 /* ---------------- Nav ---------------- */
 
 export const navLinks: NavLink[] = [
@@ -99,7 +110,7 @@ export const navCta = { href: '#sumarse', label: 'Apoyar la visión' }
 /* ---------------- Hero ---------------- */
 
 export const hero = {
-  img: '/assets/sancristobal.jpg',
+  img: asset('sancristobal.jpg'),
   alt: 'San Cristóbal, estado Táchira',
   kicker: 'Visión estratégica · Horizonte 2030',
   title: 'Estrategias viales y de transporte para el futuro',
@@ -136,7 +147,7 @@ export const diagnostico = {
   kicker: 'El diagnóstico',
   title: 'Una red estratégica, pero deteriorada',
   lede: 'El Táchira colinda con Norte de Santander (Colombia) y concentra el principal corredor comercial entre ambos países. Sin embargo, su infraestructura obsoleta frena la competitividad de toda la región.',
-  img: '/assets/mapa-tachira.png',
+  img: asset('mapa-tachira.png'),
   alt: 'Mapa funcional del estado Táchira',
   facts: [
     {
@@ -190,7 +201,7 @@ export const ejes: Eje[] = [
   },
   {
     tag: 'EJE 2',
-    nombre: 'La Fría – Cúcuta',
+    nombre: 'La Fría – Guarumito – Agua Clara – Cúcuta',
     desc: 'Vía expresa doble calzada · 65 km',
     val: { n: '$280', affix: { text: ' M', size: 0.5, gold: true } },
     estado: 'part',
@@ -214,6 +225,14 @@ export const ejes: Eje[] = [
   },
 ]
 
+/** Mapa binacional de Guarumito — corrección #2 (junio 2026). */
+export const ejesFigura: Figura = {
+  img: asset('mapa-eje2.png'),
+  alt: 'Mapa del cruce binacional en Guarumito, frontera Venezuela – Colombia',
+  caption:
+    'Eje 2 · cruce binacional La Fría – Guarumito – Agua Clara – Cúcuta · frontera Venezuela – Colombia',
+}
+
 /* ---------------- Proyecto estrella ---------------- */
 
 export const estrellaHead: SectionHead = {
@@ -223,7 +242,7 @@ export const estrellaHead: SectionHead = {
 }
 
 export const estrella = {
-  img: '/assets/autopista.jpg',
+  img: asset('autopista.jpg'),
   alt: 'Autopista San Cristóbal – La Fría',
   kicker: 'Inversión total · USD 2025',
   big: '$1.219,7 M',
@@ -231,8 +250,17 @@ export const estrella = {
     { label: 'Longitud', value: '65,9 km · 5 tramos' },
     { label: 'Costo medio', value: '$18,5 M / km' },
     { label: 'Tramo II · Copa de Oro – Lobatera', value: '$499,8 M' },
+    { label: 'Túnel Palo Grande', value: '2 × 2.500 m' },
     { label: 'Tramo IVb · Viaducto La Colorada', value: '$207,9 M' },
   ] satisfies StarRow[],
+}
+
+/** Infografía del trazado del corredor — corrección #4 (junio 2026). */
+export const estrellaFigura: Figura = {
+  img: asset('trazado-corredor.png'),
+  alt: 'Trazado del corredor San Cristóbal – La Fría por tramos',
+  caption:
+    'Trazado del corredor · 5 tramos · túnel Palo Grande 2 × 2.500 m · viaductos hasta H = 64 m · Viaducto La Colorada 359 m',
 }
 
 /* ---------------- Pilares ---------------- */
@@ -245,7 +273,7 @@ export const pilaresHead: SectionHead = {
 
 export const pilares: Pilar[] = [
   {
-    img: '/assets/render-hub.png',
+    img: asset('render-hub.png'),
     alt: 'Hub de carga aéreo La Fría',
     titulo: 'Hub de carga aéreo',
     texto:
@@ -253,7 +281,7 @@ export const pilares: Pilar[] = [
     meta: '85% del potencial aéreo hoy sin aprovechar',
   },
   {
-    img: '/assets/puerto-seco.jpg',
+    img: asset('puerto-seco.jpg'),
     alt: 'Puerto seco y plataforma logística',
     titulo: 'Puerto seco La Fría',
     texto:
@@ -261,7 +289,7 @@ export const pilares: Pilar[] = [
     meta: 'Zona industrial · 28 empresas establecidas',
   },
   {
-    img: '/assets/tren.jpg',
+    img: asset('tren.jpg'),
     alt: 'Plan ferroviario del eje occidental',
     titulo: 'Ferrocarril e ITS',
     texto:
@@ -337,6 +365,7 @@ export const fases: Fase[] = [
       'Completar Viaducto La Colorada',
       'Pista La Fría a 2.500 m',
       'Básculas en 4 pasos fronterizos',
+      'Rehabilitar tramos I, III y V',
     ],
   },
   {
