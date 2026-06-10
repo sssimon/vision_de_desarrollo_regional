@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 900" font-family="'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif">
+  <!-- ============ Paleta de marca ============
+       ink #0E1C2B · paper #F2F0EA · gold #BE8A2E
+       signal #AE3B2C (crítico) · good #3C7C68 (positivo) · steel #5B6B7B (planificación)
+  -->
+  <defs>
+    <style>
+      .ttl  { fill:#0E1C2B; font-weight:700; }
+      .sub  { fill:#2A4258; font-weight:400; }
+      .kick { fill:#BE8A2E; font-weight:700; letter-spacing:2px; }
+      .node-lbl { fill:#0E1C2B; font-weight:600; }
+      .node-cap { fill:#5B6B7B; font-weight:400; }
+      .eje-tag  { fill:#BE8A2E; font-weight:700; letter-spacing:1.5px; }
+      .eje-name { fill:#0E1C2B; font-weight:700; }
+      .eje-desc { fill:#2A4258; font-weight:400; }
+      .eje-val  { fill:#0E1C2B; font-weight:700; }
+      .chip-txt { font-weight:700; letter-spacing:.5px; }
+    </style>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1240" height="900" fill="#F2F0EA"/>
+
+  <!-- ============ Encabezado ============ -->
+  <text x="60" y="58"  class="kick" font-size="15">LA PROPUESTA · TÁCHIRA 2030</text>
+  <text x="60" y="98"  class="ttl"  font-size="34">Cuatro ejes viales que rearman la malla regional</text>
+  <text x="60" y="128" class="sub"  font-size="16">Corredores binacionales y de integración: conectan la frontera con Colombia, la metrópoli de San Cristóbal y el resto del país.</text>
+
+  <!-- ============ Mapa esquemático de red ============ -->
+  <!-- Marca de país -->
+  <text x="120" y="200" class="node-cap" font-size="13" letter-spacing="1">COLOMBIA  ·  N. DE SANTANDER</text>
+  <text x="1010" y="200" class="node-cap" font-size="13" letter-spacing="1" text-anchor="end">→  RESTO DE VENEZUELA</text>
+  <line x1="60" y1="215" x2="1180" y2="215" stroke="#0E1C2B" stroke-opacity=".08" stroke-width="1"/>
+
+  <!-- Casings (trazo oscuro de fondo, da sensación de carretera) -->
+  <g fill="none" stroke="#0E1C2B" stroke-opacity=".10" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 640 430 L 360 270"/>                         <!-- Eje 1 -->
+    <path d="M 360 270 L 170 350"/>                         <!-- Eje 2 -->
+    <path d="M 150 470 L 210 560 L 420 600 L 640 430"/>     <!-- Eje 3 -->
+    <path d="M 640 430 L 900 360 L 1110 300"/>              <!-- Eje 4 -->
+  </g>
+
+  <!-- Trazos de cada eje (color = estado) -->
+  <g fill="none" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 640 430 L 360 270" stroke="#AE3B2C"/>                        <!-- Eje 1 · Paralizada -->
+    <path d="M 360 270 L 170 350" stroke="#BE8A2E"/>                        <!-- Eje 2 · Parcial -->
+    <path d="M 150 470 L 210 560 L 420 600 L 640 430" stroke="#3C7C68"/>    <!-- Eje 3 · 42% ejecutado -->
+    <path d="M 640 430 L 900 360 L 1110 300" stroke="#5B6B7B" stroke-dasharray="2 11"/> <!-- Eje 4 · Planificación -->
+  </g>
+
+  <!-- Etiquetas de eje sobre el trazo -->
+  <text x="505" y="335" class="eje-tag" font-size="13" text-anchor="middle" transform="rotate(-29 505 335)">EJE 1 · 65,9 km</text>
+  <text x="258" y="290" class="eje-tag" font-size="13" text-anchor="middle" transform="rotate(23 258 290)">EJE 2 · 65 km</text>
+  <text x="330" y="600" class="eje-tag" font-size="13" text-anchor="middle">EJE 3 · 42 km</text>
+  <text x="880" y="368" class="eje-tag" font-size="13" text-anchor="middle" transform="rotate(-15 880 368)">EJE 4 · 109 km</text>
+
+  <!-- Nodos -->
+  <!-- nodo helper: círculo + etiqueta -->
+  <g>
+    <!-- Cúcuta (frontera CO) -->
+    <circle cx="170" cy="350" r="8" fill="#0E1C2B" stroke="#F2F0EA" stroke-width="3"/>
+    <text x="170" y="335" class="node-lbl" font-size="15" text-anchor="middle">Cúcuta</text>
+    <text x="170" y="320" class="node-cap" font-size="11" text-anchor="middle">Colombia</text>
+
+    <!-- La Fría -->
+    <circle cx="360" cy="270" r="8" fill="#0E1C2B" stroke="#F2F0EA" stroke-width="3"/>
+    <text x="360" y="255" class="node-lbl" font-size="15" text-anchor="middle">La Fría</text>
+
+    <!-- Ureña (frontera) -->
+    <circle cx="150" cy="470" r="8" fill="#0E1C2B" stroke="#F2F0EA" stroke-width="3"/>
+    <text x="150" y="495" class="node-lbl" font-size="15" text-anchor="middle">Ureña</text>
+
+    <!-- San Antonio (frontera) -->
+    <circle cx="210" cy="560" r="8" fill="#0E1C2B" stroke="#F2F0EA" stroke-width="3"/>
+    <text x="210" y="585" class="node-lbl" font-size="15" text-anchor="middle">San Antonio</text>
+    <text x="210" y="601" class="node-cap" font-size="11" text-anchor="middle">paso fronterizo</text>
+
+    <!-- Rubio -->
+    <circle cx="420" cy="600" r="8" fill="#0E1C2B" stroke="#F2F0EA" stroke-width="3"/>
+    <text x="420" y="625" class="node-lbl" font-size="15" text-anchor="middle">Rubio</text>
+
+    <!-- Santo Domingo -->
+    <circle cx="900" cy="360" r="8" fill="#0E1C2B" stroke="#F2F0EA" stroke-width="3"/>
+    <text x="900" y="345" class="node-lbl" font-size="15" text-anchor="middle">Santo Domingo</text>
+
+    <!-- Lím. Barinas -->
+    <circle cx="1110" cy="300" r="8" fill="#0E1C2B" stroke="#F2F0EA" stroke-width="3"/>
+    <text x="1110" y="285" class="node-lbl" font-size="15" text-anchor="middle">Lím. Barinas</text>
+
+    <!-- San Cristóbal · HUB -->
+    <circle cx="640" cy="430" r="17" fill="#BE8A2E" stroke="#0E1C2B" stroke-width="3"/>
+    <circle cx="640" cy="430" r="6" fill="#0E1C2B"/>
+    <text x="640" y="478" class="node-lbl" font-size="18" text-anchor="middle" font-weight="700">San Cristóbal</text>
+    <text x="640" y="496" class="kick" font-size="11" text-anchor="middle">NODO CENTRAL · HUB</text>
+  </g>
+
+  <!-- ============ Tarjetas resumen de los 4 ejes ============ -->
+  <!-- y base 660, cuatro tarjetas de 275 de ancho -->
+  <g>
+    <!-- EJE 1 -->
+    <rect x="60"  y="665" width="265" height="175" rx="10" fill="#FBFAF6" stroke="#0E1C2B" stroke-opacity=".10"/>
+    <rect x="60"  y="665" width="265" height="6"   rx="3" fill="#AE3B2C"/>
+    <text x="80" y="703" class="eje-tag"  font-size="13">EJE 1</text>
+    <text x="80" y="728" class="eje-name" font-size="17">San Cristóbal – La Fría</text>
+    <text x="80" y="752" class="eje-desc" font-size="13">Autopista · 65,9 km · 5 tramos</text>
+    <text x="80" y="792" class="eje-val"  font-size="22">$1.219,7<tspan font-size="14" fill="#BE8A2E"> M</tspan></text>
+    <rect x="80" y="806" width="118" height="22" rx="11" fill="#AE3B2C" fill-opacity=".12"/>
+    <circle cx="93" cy="817" r="4" fill="#AE3B2C"/>
+    <text x="104" y="821" class="chip-txt" font-size="11" fill="#AE3B2C">PARALIZADA</text>
+
+    <!-- EJE 2 -->
+    <rect x="345" y="665" width="265" height="175" rx="10" fill="#FBFAF6" stroke="#0E1C2B" stroke-opacity=".10"/>
+    <rect x="345" y="665" width="265" height="6"   rx="3" fill="#BE8A2E"/>
+    <text x="365" y="703" class="eje-tag"  font-size="13">EJE 2</text>
+    <text x="365" y="728" class="eje-name" font-size="17">La Fría – Cúcuta</text>
+    <text x="365" y="752" class="eje-desc" font-size="13">Vía expresa doble calzada · 65 km</text>
+    <text x="365" y="792" class="eje-val"  font-size="22">$280<tspan font-size="14" fill="#BE8A2E"> M</tspan></text>
+    <rect x="365" y="806" width="86" height="22" rx="11" fill="#BE8A2E" fill-opacity=".14"/>
+    <circle cx="378" cy="817" r="4" fill="#BE8A2E"/>
+    <text x="389" y="821" class="chip-txt" font-size="11" fill="#8a6516">PARCIAL</text>
+
+    <!-- EJE 3 -->
+    <rect x="630" y="665" width="265" height="175" rx="10" fill="#FBFAF6" stroke="#0E1C2B" stroke-opacity=".10"/>
+    <rect x="630" y="665" width="265" height="6"   rx="3" fill="#3C7C68"/>
+    <text x="650" y="703" class="eje-tag"  font-size="13">EJE 3</text>
+    <text x="650" y="728" class="eje-name" font-size="16">Ureña – S. Antonio – Rubio – SC</text>
+    <text x="650" y="752" class="eje-desc" font-size="13">Vía expresa 4 canales · 42 km</text>
+    <text x="650" y="792" class="eje-val"  font-size="22">$280–320<tspan font-size="14" fill="#BE8A2E"> M</tspan></text>
+    <rect x="650" y="806" width="128" height="22" rx="11" fill="#3C7C68" fill-opacity=".14"/>
+    <circle cx="663" cy="817" r="4" fill="#3C7C68"/>
+    <text x="674" y="821" class="chip-txt" font-size="11" fill="#2f6252">42% EJECUTADO</text>
+
+    <!-- EJE 4 -->
+    <rect x="915" y="665" width="265" height="175" rx="10" fill="#FBFAF6" stroke="#0E1C2B" stroke-opacity=".10"/>
+    <rect x="915" y="665" width="265" height="6"   rx="3" fill="#5B6B7B"/>
+    <text x="935" y="703" class="eje-tag"  font-size="13">EJE 4</text>
+    <text x="935" y="728" class="eje-name" font-size="16">SC – Sto. Domingo – Lím. Barinas</text>
+    <text x="935" y="752" class="eje-desc" font-size="13">Vía expresa 4 canales · 109 km</text>
+    <text x="935" y="792" class="eje-val"  font-size="22">$778,2<tspan font-size="14" fill="#BE8A2E"> M</tspan></text>
+    <rect x="935" y="806" width="142" height="22" rx="11" fill="#5B6B7B" fill-opacity=".16"/>
+    <circle cx="948" cy="817" r="4" fill="#5B6B7B"/>
+    <text x="959" y="821" class="chip-txt" font-size="11" fill="#46535f">EN PLANIFICACIÓN</text>
+  </g>
+
+  <!-- Total -->
+  <text x="1180" y="128" class="sub" font-size="14" text-anchor="end">Inversión vial estructurante</text>
+  <text x="1180" y="158" class="ttl" font-size="26" text-anchor="end">≈ $2.580<tspan font-size="16" fill="#BE8A2E"> M</tspan></text>
+</svg>

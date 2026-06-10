@@ -1,0 +1,22 @@
+/* Coda final — fondo más profundo que el CTA (--ink-deep) y hairline dorado
+   arriba para separarla visualmente del llamado a la acción que la precede. */
+section.cierre{
+  background:var(--ink-deep);
+  border-top:1px solid rgba(190,138,46,.35); /* --gold @ 35% */
+  text-align:center;
+}
+
+.inner{ max-width:680px; margin:0 auto; }
+
+.quote{
+  font-family:var(--font-cond); font-weight:600;
+  font-size:clamp(28px, 3vw, 44px); line-height:1.18;
+  letter-spacing:-.01em; margin-top:22px; text-wrap:balance;
+  color:var(--paper);
+}
+.quote b{ color:var(--gold-2); font-weight:600; } /* palabras clave en dorado */
+
+.firma{
+  font-family:var(--font-mono); font-size:13px; letter-spacing:.06em;
+  text-transform:uppercase; color:rgba(242,240,234,.55); margin-top:34px;
+}

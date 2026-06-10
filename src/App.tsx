@@ -9,6 +9,7 @@ import Impacto from './components/Impacto/Impacto'
 import Transformacion from './components/Transformacion/Transformacion'
 import HojaDeRuta from './components/HojaDeRuta/HojaDeRuta'
 import CTA from './components/CTA/CTA'
+import Cierre from './components/Cierre/Cierre'
 import Footer from './components/Footer/Footer'
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
         <Transformacion />
         <HojaDeRuta />
         <CTA />
+        <Cierre />
       </main>
       <Footer />
     </>

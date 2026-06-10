@@ -385,13 +385,26 @@ export const fases: Fase[] = [
 
 export const cta = {
   kicker: 'Llamado a la acción',
-  title: 'El Táchira tiene todo para ser el corazón logístico de Venezuela',
+  title: 'Esta visión solo se cumple si la construimos juntos',
   text: 'Sumemos voluntad política, inversión y participación comunitaria. Esta propuesta es una invitación a los profesionales, técnicos y ciudadanos a construir juntos el futuro de la región.',
   actions: [
     { href: 'mailto:simondariob@gmail.com', label: 'Escribir al Ing. Ballesteros', variant: 'gold' as const },
-    // Placeholder: el deck final aún no está en el paquete (decisión registrada).
-    { href: 'Presentacion Tachira 2030.html', label: 'Ver la propuesta completa', variant: 'ghost' as const },
+    { href: `${import.meta.env.BASE_URL}docs/Whitepaper_Estrategia_Vial_Tachira.pdf`, label: 'Descargar el whitepaper (PDF)', variant: 'ghost' as const },
   ],
+}
+
+/* ---------------- Cierre ---------------- */
+
+export const cierre = {
+  kicker: 'El Táchira que viene',
+  quote: (
+    <>
+      El Táchira tiene todo para volver a ser el{' '}
+      <b>corazón que conecta a Venezuela</b>: la posición, la gente y la visión.
+      Solo falta la decisión de abrir el camino. <b>Empecémoslo hoy.</b>
+    </>
+  ),
+  firma: 'Ing. Simón Ballesteros M. · CIV 38.076',
 }
 
 /* ---------------- Footer ---------------- */
